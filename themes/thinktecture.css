@@ -1,0 +1,75 @@
+/* @theme thinktecture */
+
+@import "default";
+
+section {
+  justify-content: unset;
+
+  width: 1920pt;
+  height: 1080pt;
+  font-size: 48pt;
+
+  background: rgb(255, 0, 0);
+  background: url("/themes/logo.svg"),
+    linear-gradient(
+      180deg,
+      rgba(255, 88, 79, 1) 0,
+      rgba(255, 88, 79, 1) 100pt,
+      rgba(255, 255, 255, 1) 100pt
+    );
+  background-size: auto 65pt, cover;
+  background-repeat: no-repeat;
+  background-position-x: 96%, 0;
+  background-position-y: 18pt, 0;
+
+  padding: 60pt;
+  padding-top: 160pt;
+}
+
+h1 {
+  color: unset;
+
+  font-size: 60pt;
+}
+
+/* Title Slide */
+section.title {
+  background: url("/themes/logo.svg"), url("/themes/t.svg"),
+    rgba(255, 88, 79, 1);
+  background-size: auto 166pt, auto 359pt, cover;
+  background-repeat: no-repeat;
+  background-position-x: 96%, 96%, 0;
+  background-position-y: 60pt, 92%, 0;
+
+  color: white;
+  padding-top: 60pt;
+}
+
+section.title h1 {
+  font-size: 70pt;
+  margin: 0;
+}
+
+section.title h2 {
+  font-size: 60pt;
+  font-weight: normal;
+  margin: 0;
+}
+
+section.title ul {
+  font-weight: 500;
+  margin-top: auto;
+  list-style: none;
+  padding: 0;
+}
+
+section.title ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Section Slide */
+section.section-slide {
+  align-items: center;
+  justify-content: center;
+}
