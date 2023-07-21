@@ -7,6 +7,8 @@ section {
 
   width: 1920pt;
   height: 1080pt;
+
+  font-family: Campton;
   font-size: 48pt;
 
   background: rgb(255, 0, 0);
@@ -26,10 +28,19 @@ section {
   padding-top: 160pt;
 }
 
+ul {
+  padding-left: 40pt;
+}
+
+li {
+  padding-left: 15pt;
+}
+
 h1 {
   color: unset;
 
   font-size: 60pt;
+  margin-bottom: 50pt;
 }
 
 /* Title Slide */
