@@ -40,6 +40,8 @@ h1 {
   color: unset;
 
   font-size: 60pt;
+  line-height: 60pt;
+  padding: 0;
   margin-bottom: 50pt;
 }
 
@@ -83,4 +85,10 @@ section.title ul li {
 section.section-slide {
   align-items: center;
   justify-content: center;
+}
+
+img {
+  position: absolute;
+  right: 60pt;
+  top: 270pt; /* padding-top + h1 + h1.margin */
 }
