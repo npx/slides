@@ -12,7 +12,7 @@ section {
   font-size: 48pt;
 
   background: rgb(255, 0, 0);
-  background: url("/themes/logo.svg"),
+  background: url("../themes/logo.svg"),
     linear-gradient(
       180deg,
       rgba(255, 88, 79, 1) 0,
@@ -45,7 +45,7 @@ h1 {
 
 /* Title Slide */
 section.title {
-  background: url("/themes/logo.svg"), url("/themes/t.svg"),
+  background: url("../themes/logo.svg"), url("../themes/t.svg"),
     rgba(255, 88, 79, 1);
   background-size: auto 166pt, auto 359pt, cover;
   background-repeat: no-repeat;
