@@ -91,4 +91,16 @@ img {
   position: absolute;
   right: 60pt;
   top: 270pt; /* padding-top + h1 + h1.margin */
+  max-height: 750pt;
+  min-width: 600pt;
+}
+
+img[alt~="center"] {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+img[alt~="bottom"] {
+  top: unset;
+  bottom: 60pt;
 }

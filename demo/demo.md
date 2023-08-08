@@ -23,6 +23,8 @@ theme: thinktecture
 - Orange
 - Tomato
 
+![width:800pt](./img/term.png)
+
 ---
 
 # Regular slide with code
