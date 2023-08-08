@@ -28,14 +28,6 @@ section {
   padding-top: 160pt;
 }
 
-ul {
-  padding-left: 40pt;
-}
-
-li {
-  padding-left: 15pt;
-}
-
 h1 {
   color: unset;
 
@@ -43,6 +35,32 @@ h1 {
   line-height: 60pt;
   padding: 0;
   margin-bottom: 50pt;
+}
+
+/* General List */
+ul {
+  padding-left: 40pt;
+}
+li {
+  padding-left: 15pt;
+}
+
+/* Conclusion List */
+ul ~ ul:last-child,
+ol:last-child {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* font-weight: 500; */
+  list-style-type: "👉";
+  padding-left: 3ch;
+}
+ul ~ ul:last-child li,
+ol:last-child li {
+  padding-left: 30pt;
 }
 
 /* Title Slide */
@@ -60,7 +78,7 @@ section.title {
 
 section.title h1 {
   font-size: 70pt;
-  margin: 0;
+  margin-bottom: 20pt;
 }
 
 section.title h2 {
