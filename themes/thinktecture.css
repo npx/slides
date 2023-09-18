@@ -47,7 +47,7 @@ li {
 
 /* Conclusion List */
 ul ~ ul:last-child,
-ol:last-child {
+ol:last-of-type {
   flex: 1;
 
   display: flex;
@@ -59,7 +59,7 @@ ol:last-child {
   padding-left: 3ch;
 }
 ul ~ ul:last-child li,
-ol:last-child li {
+ol:last-of-type li {
   padding-left: 30pt;
 }
 
