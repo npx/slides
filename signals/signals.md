@@ -110,7 +110,7 @@ export class CounterComponent {
 
 # Downsides of RxJS (for template rendering)
 
-- Observables asynchronous by default
+- Observables asynchronous by nature
 - AsyncPipe default null value
 - Subscription management
 - Recheck all template bindings
@@ -191,15 +191,29 @@ export class CounterComponent {
 - **computed()**
   Create a _read only_ Signal deriving its value from other Signals
 
-<!-- effect: logge was  -->
-<!-- live: show signal and computed -->
-<!-- computed() -> nono function binding nach computed() -->
-
 ---
 
 <!-- _class: section-slide -->
 
-# Stop ... demo time
+# Code with me?
+
+https://github.com/thinktecture/ngrx-demo
+
+Branch: code-with-me/signals
+
+<!--
+Code With Me:
+
+* start on signals/code-with-me
+* explain what the counter does
+  - changes color of count
+  - count
+  - reset
+  - persistence
+* show color function and CD runs -> OnPush
+* migrate to signals
+* introduce effect()
+-->
 
 ---
 
@@ -208,12 +222,49 @@ export class CounterComponent {
 - React to signal value changes
 - Used for side effects
   - _logging, persisting to browser storage, ..._
+- Executed once initially
 - Can not write to Signals by default
 - Reliant on the injection context
 
+<!--
+Code With Me:
+
+* migrate persisting to effect
+* introduce signal based components
+-->
+
 ---
 
-# RxJS is here to stay
+# Signal based Components
+
+- **input()**
+  Create a writable Signal bound to a component input
+- **model()**
+  Creates a writable Signal that reflects changes (two way binding)
+- **viewChild() / viewChildren()**
+  Access references to components, directives and elements in your view
+
+<!--
+Code With Me:
+
+* read storage key from input
+* make storage key required
+* toggle key in host
+* introduce untracked() to prevent persisting same value
+* refactor to model() two way binding (counter value from host)
+* move persisting to host
+
+* show stopping and starting an effect (start/stop persisting)
+
+* viewChildren: find counters
+* add public api to change colors?
+
+* advanced demos
+-->
+
+---
+
+# RxJS has its place
 
 - RxJS is used to handle asynchronicity
 - Plenty of useful operators
@@ -221,7 +272,7 @@ export class CounterComponent {
 - RxJS interop provided by angular
   - toObservable / toSignal / takeUntilDestoyed
 - Used for asynchronous side effects
-  - @ngrx/effects, ComponentStore effects
+  - @ngrx/effects, ComponentStore effects, rxMethod
 
 ---
 
@@ -229,8 +280,8 @@ export class CounterComponent {
 
 - Zone-less applications
 - Signal based components
-  - input, output, model
 - Signal based, synchronous APIs
+- Function based life cycle hooks
 
 1. Less concepts to learn
 2. Better performance out of the box
@@ -238,7 +289,7 @@ export class CounterComponent {
 
 ---
 
-# Read more about upcoming changes
+# Read more about upcoming changes in Angular
 
 1. https://github.com/angular/angular/discussions
 2. https://angular.io/guide/signals
@@ -255,10 +306,26 @@ https://www.thinktecture.com/thinktects/yannick-baron
 
 ---
 
-# Workshop Ideen
+# Workshop Ideen: Advanced
 
 - signal comparator function
-- Injection context
-- rxjs interop
+  - show mutable data type and default equal function
 
+- rxjs interop
+  - toObservable
+
+Flow:
+- equal function
+  - show via reset that signal does not fire with same value
+  - build save signal<void> "trigger"
+- untracked
+  - show untracked in effect as function
+  - show untracked around signal
+  - show untracked in computed
+- toSignal
+  - use interval to periodically save
+  - show that unsubscribed when component is destroyed
+  - explain destroyRef and takeUntilDestroyed
+- effect write
+  - cleanup
 -->
