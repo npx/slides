@@ -119,7 +119,7 @@ description: "Unsere Anwendungen müssen mit State auf verschiedensten Ebenen zu
 
 https://github.com/thinktecture/ngrx-demo
 
-Branch: code-with-me/signal-store
+Branch: signal-store/code-with-me
 
 <!--
 
@@ -132,10 +132,15 @@ Branch: code-with-me/signal-store
   - outsource loadingStart and loadingDone
   - make them patchers
   - async updateItem
+  - make entity updates patchers as well (transition to withEntities easily)
 * rxMethod: loadList
 * withEntities
 
 * custom feature: withSort
+ - implement withSort
+ - add to store
+ - add withHooks for initial setting of sort
+ - adjust withSort to accept initial parameter
 
 * signalState: in the counter example
 
