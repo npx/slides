@@ -199,7 +199,7 @@ export class CounterComponent {
 
 https://github.com/thinktecture/ngrx-demo
 
-Branch: code-with-me/signals
+Branch: signals/code-with-me
 
 <!--
 Code With Me:
@@ -270,7 +270,7 @@ Code With Me:
 - Plenty of useful operators
   - error handling, retrying, scheduling, buffering, ...
 - RxJS interop provided by angular
-  - toObservable / toSignal / takeUntilDestoyed
+  - toObservable / toSignal / takeUntilDestroyed
 - Used for asynchronous side effects
   - @ngrx/effects, ComponentStore effects, rxMethod
 
