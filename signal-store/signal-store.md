@@ -69,7 +69,7 @@ description: "Unsere Anwendungen müssen mit State auf verschiedensten Ebenen zu
 
 # Downsides of RxJS (for template rendering)
 
-- Observables asynchronous by default
+- Observables asynchronous by nature
 - AsyncPipe default null value
 - Subscription management
 - Recheck all template bindings
